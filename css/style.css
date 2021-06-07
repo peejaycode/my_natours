@@ -37,33 +37,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "lato", sans serif;
-  font-weight: 400;
-  /*font-size: 1.6rem;*/
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header_logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header_logo {
-    height: 3.5rem; }
-  .header_text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -85,6 +59,14 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
 
+body {
+  font-family: "lato", sans serif;
+  font-weight: 400;
+  /*font-size: 1.6rem;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -97,14 +79,14 @@ body {
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba #eee, 0.2; }
+  box-shadow: 0 1rem 2rem rgba #000, 0.2; }
   .btn:hover::after {
     transform: scaleX(1.4), scaleY(1.6);
     opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba #eee, 0.2; }
+  box-shadow: 0 0.5rem 1rem rgba #000, 0.2; }
 
 .btn-white {
   background-color: #fff;
@@ -127,3 +109,45 @@ body {
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75;
   animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+    .row [class^="col-"] .col-1-0f-2 {
+      width: calc((100% - 6rem)/2); }
+    .row [class^="col-"] .col-1-of-3 {
+      width: calc((100% - 2 * 6rem)/3); }
+    .row [class^="col-"] .col-1-0f-4 {
+      width: calc((100% - 3* 6rem)/4); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header_logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header_logo {
+    height: 3.5rem; }
+  .header_text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
